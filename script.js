@@ -20,14 +20,20 @@ const pages = {
     </section>
   `,
   hobbies: `
-    <section class="card">
-      <h2>Personal Interests</h2>
-      <p>When I’m not working, I’m out hiking, crocheting, or gaming. Here’s a glimpse:</p>
-      <div class="gallery">
-        <img src="images/gallery/hikingPoland.jpg" alt="Hiking Poland">
-        <img src="images/gallery/hikingSnowdon.jpg" alt="Hiking Snowdon">
+  <section class="card">
+    <h2>Personal Interests</h2>
+    <p>When I’m not working, I’m out hiking, crocheting, or gaming. Here’s a glimpse:</p>
+    <div class="gallery">
+      <div class="gallery-grid">
+        <img src="images/gallery/hikingPoland.jpg" alt="Hiking in Poland" />
+        <img src="images/gallery/hikingSnowdon.jpg" alt="Hiking Mount Snowdon" />
+        <img src="images/gallery/crochet.jpg" alt="Crochet project" />
+        <img src="images/gallery/gamingSetup.jpg" alt="Gaming setup" />
+        <img src="images/gallery/nature.jpg" alt="Nature walk" />
+        <img src="images/gallery/sunset.jpg" alt="Sunset view" />
       </div>
-    </section>
+    </div>
+  </section>
   `,
   contact: `
     <section class="card">
@@ -50,11 +56,14 @@ function loadPage(page) {
 
   setTimeout(() => {
     content.innerHTML = pages[page] || "<section class='card'><h2>404</h2><p>Page not found.</p></section>";
+    // Force reflow:
+    content.offsetHeight;
     content.classList.remove("fade-out");
   }, 300);
 
   window.history.pushState({}, "", `#${page}`);
 }
+
 
 links.forEach(link => {
   link.addEventListener("click", (e) => {

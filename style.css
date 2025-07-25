@@ -46,3 +46,36 @@ main {
 #content.fade-out {
   opacity: 0;
 }
+.gallery {
+  max-width: 900px; /* or 100%, or whatever fits your layout */
+  margin: 2rem auto; /* center it */
+  padding: 0 1rem;
+}
+
+.gallery h2 {
+  font-weight: 600;
+  margin-bottom: 1rem;
+  font-family: 'Inter', sans-serif;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.gallery-grid {
+  display: grid !important;;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  max-width: 100%;
+}
+
+.gallery-grid img {
+  width: 100%;      /* Make each image fill its grid cell width */
+  height: 150px;    /* Fixed height for uniformity */
+  object-fit: cover; /* Crop image nicely without distortion */
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
