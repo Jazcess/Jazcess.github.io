@@ -4,72 +4,37 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Jazmin Stewart - Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
 </head>
 <body>
-
-  <header>
-    <h1>Jazmin Stewart</h1>
-    <p>Physicist | Hiking | Gaming</p>
+  <header class="site-header">
+    <div class="container">
+      <h1>Jazmin Stewart</h1>
+      <p>Physicist • Hiker • Gamer</p>
+    </div>
   </header>
-
-  <nav>
-    <a href="#about">About</a>
-    <a href="#work">Work</a>
-    <a href="#projects">Projects</a>
-    <a href="#hobbies">Hobbies</a>
-    <a href="#contact">Contact</a>
+  <nav class="navbar">
+    <div class="container">
+      <a href="#about" data-page="about">About</a>
+      <a href="#work" data-page="work">Work</a>
+      <a href="#hobbies" data-page="hobbies">Hobbies</a>
+      <a href="#contact" data-page="contact">Contact</a>
+    </div>
   </nav>
-
-  <main>
-    <section id="about">
-      <h2>About Me</h2>
-      <p>Hello! I'm Jazmin Stewart, a physics PhD student at the University of Leicester. I enjoy experimental research and Monte Carlo simulations, as well as coding in C++ and Python. 
-        My hobbies include hiking, gaming, reading and crocheting - and i like to share all of the above here on my personal webpage.
-      </p>
-    </section>
-
-    <section id="work">
-      <h2>Professional Background</h2>
-      <p>I’m currently pursuing a PhD in Astroparticle Physics at the University of Leicester, where I focus on developing a novel photodetector configuration for use in high energy 
-        water Cherenkov detectors for gamma-ray observatories. The proposed detector design involves small area photomultiplier tubes (PMTs) coupled with wavelength shifting (WLS) plates, 
-        to increase the light capture area of the detector.</p>
-    </section>
-
-    <section id="projects">
-      <h2>Featured Projects</h2>
-      <ul>
-        <li><strong>SWGO Photodetector Study</strong> – Development and characterization of novel WLS-enhanced PMT configurations for Cherenkov detectors.</li>
-        <li><strong>PMT Angular Response Mapping</strong> – High-resolution scanning of photomultiplier tubes to extract angular sensitivity profiles. <a href="https://github.com/Jazcess" target="_blank">View on GitHub</a></li>
-      </ul>
-    </section>
-
-    <section id="hobbies">
-      <h2>Personal Interests</h2>
-      <p>Outside of work, I enjoy landscape hiking, cozy gaming sessions, photography, and crochet. Here’s a glimpse into what I love:</p>
-      <div class="gallery">
-        <img src="images/gallery/hikingPoland.jpg" alt="Hiking">
-        <img src="images/gallery/hikingSnowdon.jpg" alt="Hiking">
-      </div>
-    </section>
-
-    <section id="contact">
-      <h2>Contact</h2>
-      <p><strong>Work Email:</strong> <a href="mailto:jss55@leicester.ac.uk">jss55@leicester.ac.uk</a></p>
-      <p><strong>Personal Email:</strong> <a href="mailto:jazmin.stewart1234@gmail.com">jazmin.stewart1234@gmail.com</a></p>
-      <p>
-        <a href="https://www.linkedin.com/in/jazminstewart/" target="_blank">LinkedIn</a> |
-        <a href="https://le.ac.uk/people/jazmin-stewart" target="_blank">University of Leicester Webpage</a> |
-        <a href="https://github.com/Jazcess" target="_blank">GitHub</a> |
-        <a href="https://www.instagram.com/jazmin__stewart01/" target="_blank">Instagram</a> |
-        <a href="https://orcid.org/my-orcid?orcid=0009-0001-8368-7383" target="_blank">ORCiD</a>
-      </p>
+  <main class="container" id="content">
+    <section class="card">
+      <h2>Welcome</h2>
+      <p>Welcome to my personal site. Use the tabs above to learn more about me, my work, and my hobbies!</p>
     </section>
   </main>
-
-  <footer>
-    <p>&copy; 2025 Jazmin Stewart</p>
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 Jazmin Stewart</p>
+    </div>
   </footer>
-
 </body>
 </html>
