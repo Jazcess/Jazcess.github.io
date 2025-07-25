@@ -15,25 +15,18 @@
       <p>Physicist • Hiker • Gamer</p>
     </div>
   </header>
+
   <nav>
-    <a href="about.html">About</a>
-    <a href="work.html">Work</a>
-    <a href="hobbies.html" class="active">Hobbies</a>
-    <a href="contact.html">Contact</a>
+    <a href="#about" data-page="about">About</a>
+    <a href="#work" data-page="work">Work</a>
+    <a href="#hobbies" data-page="hobbies" class="active">Hobbies</a>
+    <a href="#contact" data-page="contact">Contact</a>
   </nav>
-  <main class="container">
-    <section class="card">
-      <h2>Personal Interests</h2>
-      <p>When I’m not working, I’m out hiking, crocheting, or gaming. Here’s a glimpse:</p>
-      <div class="gallery">
-        <img src="images/gallery/hikingPoland.jpg" alt="Hiking in Poland" />
-        <img src="images/gallery/hikingSnowdon.jpg" alt="Hiking Mount Snowdon" />
-        <img src="images/gallery/crochet.jpg" alt="Crochet project" />
-        <img src="images/gallery/gamingSetup.jpg" alt="Gaming setup" />
-        <img src="images/gallery/nature.jpg" alt="Nature walk" />
-        <img src="images/gallery/sunset.jpg" alt="Sunset view" />
-      </div>
-    </section>
+
+  <main id="content" class="container">
+    <!-- Dynamic hobbies content will be injected here -->
   </main>
+
+  <script src="script.js" defer></script>
 </body>
 </html>

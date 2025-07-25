@@ -3,10 +3,15 @@ const links = document.querySelectorAll("nav a");
 
 const pages = {
   about: `
-    <section class="card">
-      <h2>About Me</h2>
-      <p>Hello! I'm Jazmin Stewart, a PhD student in Astroparticle Physics at the University of Leicester. I enjoy experimental research, Monte Carlo simulations, and coding in C++/Python. I also love hiking, gaming, reading, and crocheting – and I share it all here.</p>
-    </section>
+  <section class="about-section">
+    <div class="about-content">
+      <img src="images/gallery/hikingPoland.jpg" alt="Jazmin Stewart" class="profile-pic" />
+      <div class="about-text">
+        <h2>Jazmin Stewart</h2>
+        <p>Hi! I'm a PhD student in Astroparticle Physics at the University of Leicester. I love experimental physics, Monte Carlo simulations, coding in C++ and Python, and sharing my journey through this site.</p>
+      </div>
+    </div>
+  </section>
   `,
   work: `
     <section class="card">
