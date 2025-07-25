@@ -41,7 +41,13 @@ const pages = {
 };
 
 function loadPage(page) {
-  content.innerHTML = pages[page] || "<section class='card'><h2>404</h2><p>Page not found.</p></section>";
+  content.classList.add("fade-out");
+
+  setTimeout(() => {
+    content.innerHTML = pages[page] || "<section class='card'><h2>404</h2><p>Page not found.</p></section>";
+    content.classList.remove("fade-out");
+  }, 300);
+
   window.history.pushState({}, "", `#${page}`);
 }
 
@@ -56,9 +62,18 @@ links.forEach(link => {
 });
 
 window.addEventListener("load", () => {
-  const hash = window.location.hash.replace("#", "") || "home";
+  const hash = window.location.hash.replace("#", "") || "about";
   if (pages[hash]) {
     loadPage(hash);
+    document.querySelector(`a[data-page="${hash}"]`)?.classList.add("active");
+  }
+});
+
+window.addEventListener("popstate", () => {
+  const hash = window.location.hash.replace("#", "") || "about";
+  if (pages[hash]) {
+    loadPage(hash);
+    links.forEach(l => l.classList.remove("active"));
     document.querySelector(`a[data-page="${hash}"]`)?.classList.add("active");
   }
 });
