@@ -1,39 +1,114 @@
-<!-- about.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About - Jazmin Stewart</title>
-  <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background-color: #4a4e69;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #222;
+      padding: 0.75rem;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #a29bfe;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      text-align: center;
+      animation: slideIn 0.8s ease-out;
+    }
+
+    .profile-pic {
+      width: 320px;
+      height: 320px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 6px solid #4a4e69;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      animation: zoomBounce 1.2s ease;
+      transition: transform 0.4s ease;
+    }
+
+    .profile-pic:hover {
+      transform: scale(1.1) rotate(1deg);
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes zoomBounce {
+      0% {
+        transform: scale(0.8);
+        opacity: 0;
+      }
+      60% {
+        transform: scale(1.1);
+        opacity: 1;
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+  </style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container">
-      <h1>Jazmin Stewart</h1>
-      <p>Physicist • Hiker • Gamer</p>
-    </div>
+  <header>
+    <h1>About Me</h1>
   </header>
-  <nav class="navbar">
-    <div class="container">
-      <a href="about.html" class="active">About</a>
-      <a href="work.html">Work</a>
-      <a href="projects.html">Projects</a>
-      <a href="hobbies.html">Hobbies</a>
-      <a href="contact.html">Contact</a>
-    </div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="work.html">Work</a>
+    <a href="hobbies.html">Hobbies</a>
+    <a href="contact.html">Contact</a>
   </nav>
-  <main class="container">
-    <section class="card">
-      <h2>About Me</h2>
-      <p>Hello! I'm Jazmin Stewart, a PhD student in Astroparticle Physics at the University of Leicester. I enjoy experimental research, Monte Carlo simulations, and coding in C++/Python. I also love hiking, gaming, reading, and crocheting – and I share it all here.</p>
-    </section>
+  <main>
+    <img src="images/gallery/hikingPoland.jpg" alt="Jazmin Stewart" class="profile-pic" />
+    <h2>Jazmin Stewart</h2>
+    <p>Hi! I'm a PhD student in Astroparticle Physics at the University of Leicester. I love experimental physics, Monte Carlo simulations, coding in C++ and Python, and sharing my journey through this site.</p>
   </main>
-  <footer class="site-footer">
-    <div class="container">
-      <p>&copy; 2025 Jazmin Stewart</p>
-    </div>
-  </footer>
 </body>
 </html>
