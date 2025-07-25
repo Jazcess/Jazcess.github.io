@@ -14,15 +14,6 @@ const pages = {
       <p>I’m researching novel photodetector configurations for gamma-ray observatories. My work involves small-area PMTs enhanced by WLS plates to boost light capture in water Cherenkov detectors.</p>
     </section>
   `,
-  projects: `
-    <section class="card">
-      <h2>Featured Projects</h2>
-      <ul>
-        <li><strong>SWGO Photodetector Study</strong> – WLS-enhanced PMTs for Cherenkov detectors.</li>
-        <li><strong>PMT Angular Response Mapping</strong> – Laser scanning for sensitivity profiling. <a href="https://github.com/Jazcess" target="_blank">View on GitHub</a></li>
-      </ul>
-    </section>
-  `,
   hobbies: `
     <section class="card">
       <h2>Personal Interests</h2>
